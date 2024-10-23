@@ -27,54 +27,26 @@ struct ContentView: View {
                 .ignoresSafeArea()
             
             VStack {
-                Circle()
-                    .foregroundStyle(.red)
-                    .opacity(redLight)
-                    .overlay(content: {
-                        
-                        Circle()
-                            .stroke(Color(.darkGray), lineWidth: 2)
-                    })
-                    .shadow(color: .red, radius: 20)
-                    .frame(width: 170, height: 170)
+                TrafficLightColor(color: .red, toggle: redLight)
                 
+                TrafficLightColor(color: .yellow, toggle: yellowLight)
                 
-                Circle()
-                    .foregroundStyle(.yellow)
-                    .opacity(yellowLight)
-                    .overlay(content: {
-                        
-                        Circle()
-                            .stroke(Color(.darkGray), lineWidth: 2)
-                    })
-                    .shadow(color: .yellow, radius: 20)
-                    .frame(width: 170, height: 170)
+                TrafficLightColor(color: .green, toggle: greenLight)
                 
-                Circle()
-                    .foregroundStyle(.green)
-                    .opacity(greenLight)
-                    .overlay(content: {
-                        
-                        Circle()
-                            .stroke(Color(.darkGray), lineWidth: 2)
-                    })
-                    .shadow(color: .green, radius: 20)
-                    .frame(width: 170, height: 170)
-                
-                Spacer(minLength: 3)
+                Spacer()
                 
                 Button { toggleColors() } label: {
                     
                     Text("Tap count: \(tapCount)")
-                        .font(.largeTitle)
                         .foregroundStyle(buttonStrokeColor)
+                        .font(.largeTitle)
                 }
                 .buttonStyle(.borderedProminent)
                 .tint(.black)
+                .shadow(color: buttonStrokeColor, radius: 15)
                 .overlay {
                     RoundedRectangle(cornerRadius: 10, style: .continuous)
                         .stroke(Color(buttonStrokeColor),lineWidth: 2)
-                        .shadow(color: buttonStrokeColor, radius: 20, x: -150, y: 0)
                 }
    
             }

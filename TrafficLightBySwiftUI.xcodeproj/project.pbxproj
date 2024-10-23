@@ -6,8 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CA1C486F2CC9A361007B4754 /* TrafficLightColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1C486E2CC9A361007B4754 /* TrafficLightColor.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		CA1C48542CC89663007B4754 /* TrafficLightBySwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrafficLightBySwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA1C486E2CC9A361007B4754 /* TrafficLightColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLightColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -32,6 +37,7 @@
 		CA1C484B2CC89663007B4754 = {
 			isa = PBXGroup;
 			children = (
+				CA1C486E2CC9A361007B4754 /* TrafficLightColor.swift */,
 				CA1C48562CC89663007B4754 /* TrafficLight */,
 				CA1C48552CC89663007B4754 /* Products */,
 			);
@@ -119,6 +125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA1C486F2CC9A361007B4754 /* TrafficLightColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
